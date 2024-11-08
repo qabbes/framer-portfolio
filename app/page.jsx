@@ -1,12 +1,12 @@
 "use client";
 import { useEffect } from "react";
-import LocomotiveScroll from "locomotive-scroll";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 import Journey from "@/components/Journey";
 import Services from "@/components/Services";
 import Work from "@/components/Work";
+import FixedMenu from "@/components/FixedMenu";
 
 const Home = () => {
   // implement locomotive scroll
@@ -18,8 +18,9 @@ const Home = () => {
     loadLocomotiveScroll();
   }, []);
   return (
-    <div>
+    <>
       <Hero />
+      <FixedMenu />
       <Services />
       <About />
       <Journey />
@@ -27,7 +28,7 @@ const Home = () => {
       <Contact />
       {/* temporary div */}
       <div className="h-[3000px]"></div>
-    </div>
+    </>
   );
 };
 
