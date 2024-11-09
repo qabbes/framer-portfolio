@@ -30,7 +30,7 @@ const Nav = ({ containerStyles, listStyles, linkStyles, spy }) => {
               activeClass="active"
               to={link.name}
               smooth
-              className={linkStyles}>
+              className={`${linkStyles} nav-link`}>
               {link.name}
             </ScrollLink>
           );
