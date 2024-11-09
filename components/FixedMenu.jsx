@@ -48,12 +48,47 @@ const FixedMenu = () => {
           <motion.div className="relative w-full max-w-md md:max-w-none h-[400px] bottom-[28rem] xl:bottom-[21.2rem] px-4 pointer-events-auto">
             <div className="bg-white w-full h-full shadow-custom max-w-[1170px] mx-auto py-12 xl:py-12 px-12 xl:px-32 flex items-center gap-12 rounded-lg">
               <Nav
-                containerStyles="md:border-r border-secondary/20 md:pr-12 w-full md:w-auto text-center md:text-left "
+                containerStyles="md:border-r border-secondary/20 md:pr-12 w-full md:w-auto text-center md:text-left"
                 listStyles="flex flex-col justify-center gap-4"
-                linkStyles="font-primary text-4xl text-primary"
+                linkStyles="font-primary text-4xl text-primary cursor-pointer"
+                spy={true}
               />
               {/* info */}
-              <div className="hidden md:flex">info</div>
+              <div className="hidden md:flex mx-auto">
+                <div>
+                  <div className="flex gap-12 mb-12">
+                    {/* Location */}
+                    <div className="flex flex-col">
+                      <div className="text-[28px] text-accent mb-2">
+                        <FiMapPin />
+                      </div>
+                      <p className="text-primary font-semibold text-lg ">Location</p>
+                      <p>Paris, France</p>
+                    </div>
+                    {/* Phone */}
+                    <div className="flex flex-col">
+                      <div className="text-[28px] text-accent mb-2">
+                        <FiPhoneCall />
+                      </div>
+                      <p className="text-primary font-semibold text-lg">Phone</p>
+                      <p>+33674889957</p>
+                    </div>
+                    {/* Email */}
+                    <div className="flex flex-col">
+                      <div className="text-[28px] text-accent mb-2">
+                        <FiMail />
+                      </div>
+                      <p className="text-primary font-semibold text-lg">E-mail</p>
+                      <p>quentin.abbes@gmail.com</p>
+                    </div>
+                  </div>
+                  {/* Socials */}
+                  <Socials
+                    containerStyles="flex gap-2"
+                    iconStyles="text-[20px] w-[32px] h-[32px] text-primary flex items-center justify-center rounded-full"
+                  />
+                </div>
+              </div>
             </div>
           </motion.div>
         )}

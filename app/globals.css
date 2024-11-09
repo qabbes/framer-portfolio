@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   body {
     @apply font-secondary text-base text-secondary;
@@ -40,6 +41,9 @@
 
   }
   .active {
+    @apply text-accent transition-all duration-200;
+  }
+  .nav-link.active {
     @apply text-accent transition-all duration-200;
   }
 
