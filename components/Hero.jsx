@@ -2,12 +2,18 @@
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { Link as ScrollLink } from "react-scroll";
+
+/* Components */
 import RotatingShape from "./RotatingShape";
 import Header from "./Header";
+import Stats from "./Stats/Stats";
 
 const Hero = () => {
   return (
-    <section className="h-[800px] relative bg-accent/10 xl:bg-white">
+    <section
+      className="h-[800px] relative
+     xl:bg-white"
+      id="home">
       {/* Header */}
       <Header />
       <div className="container mx-auto h-full">
@@ -33,11 +39,11 @@ const Hero = () => {
             <button className="btn btn-accent mb-8">Get In Touch</button>
           </ScrollLink>
           {/* Stats  */}
-          <div>stats</div>
+          <Stats />
         </div>
         {/* Image */}
         <div className="hidden xl:flex w-[55vw] h-[800px] absolute top-0 right-0 bg-accent">
-          <div className="absolute w-[558px] h-[642px] bottom-[-35px] left-[6vw] z-40 ">
+          <div className="absolute w-[558px] h-[642px] bottom-[-35px] left-[6vw] z-40 " >
             {/*"absolute w-[558px] h-[642px] bottom-0 left-[6.5vw] z-40 absolute w-[550px] h-[642px] bottom-[-12px] left-[-9px] z-40"*/}
             <Image
               src="/assets/hero/bg-remini.png"
@@ -45,14 +51,21 @@ const Hero = () => {
               quality="100"
               priority
               className="object-contain"
+              alt=""
             />
           </div>
           {/*arrow shape*/}
-          <div className="hidden xl:flex absolute top-[220px] left-[3.5vw]">
+          <div
+            className="hidden xl:flex absolute top-[220px] left-[3.5vw]"
+            data-scroll
+            data-scroll-speed="0.05">
             <Image src="/assets/hero/arrow.svg" width={160} height={160} alt="" />
           </div>
-          {/*shape 1*/}
-          <div className="absolute top-[200px] left-[30vw] ">
+          {/*shape 1 - Hex*/}
+          <div
+            className="absolute top-[200px] left-[30vw] "
+            data-scroll
+            data-scroll-speed="0.1">
             <RotatingShape
               content={
                 <Image src="/assets/hero/shape-2.svg" width={38} height={38} alt="" />
@@ -61,8 +74,11 @@ const Hero = () => {
               duration={6}
             />
           </div>
-          {/*shape 2*/}
-          <div className="absolute top-[520px] xl:left-[3.5vw] ">
+          {/*shape 2 - Square*/}
+          <div
+            className="absolute top-[520px] xl:left-[3.5vw] "
+            data-scroll
+            data-scroll-speed="0.2">
             <RotatingShape
               content={
                 <Image src="/assets/hero/shape-1.svg" width={34} height={34} alt="" />
@@ -71,8 +87,11 @@ const Hero = () => {
               duration={6}
             />
           </div>
-          {/*shape 3*/}
-          <div className="absolute top-[600px] xl:left-[40vw] ">
+          {/*shape 3 - Triangle*/}
+          <div
+            className="absolute top-[600px] xl:left-[40vw] "
+            data-scroll
+            data-scroll-speed="0.15">
             <RotatingShape
               content={
                 <Image src="/assets/hero/shape-3.svg" width={36} height={36} alt="" />
