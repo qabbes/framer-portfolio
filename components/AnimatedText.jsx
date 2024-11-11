@@ -9,7 +9,7 @@ const letterAnimation = {
   animate: (i) => ({
     y: 0,
     opacity: 1,
-    transition: { duration: 0.8, ease: [0.2, 0, 0.1, 1], delay: i[0] },
+    transition: { duration: 1, ease: [0.2, 0, 0.1, 1], delay: i[0] },
   }),
 };
 

@@ -1,7 +1,16 @@
+import AnimatedText from "./AnimatedText";
+import Cards from "./Cards/Cards";
+
 const Journey = () => {
   return (
-    <section className="bg-blue-200 py-96" id="journey">
-      Journey
+    <section className="" id="journey">
+      <div className="container mx-auto">
+        <AnimatedText
+          text="My Profesional Journey"
+          textStyles="h2 mb-[30px] text-center"
+        />
+        <Cards />
+      </div>
     </section>
   );
 };
