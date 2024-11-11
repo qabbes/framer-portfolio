@@ -48,7 +48,7 @@ const Card = ({
                     company === "French Minsitry of Interior"
                       ? " relative w-[200px] h-[130px] xl:h-[140px]"
                       : company === "Biomérieux"
-                      ? "relative w-[200px] h-[38px] xl:h-[44px] pl-8"
+                      ? "relative w-[200px] h-[38px] xl:h-[44px] pl-8 mb-6"
                       : " relative w-[210px] h-[130px] xl:h-[140px]"
                   } `}>
                   <Image

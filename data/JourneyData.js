@@ -62,7 +62,7 @@ export const journeyData = [
   {
     type: "education",
     institution: "OpenClassrooms - Capgemini",
-    logoUrl: "assets/journey/education/logo-1.svg",
+    logoUrl: "assets/journey/education/openclassrooms.svg",
     qualification: "Expert JEE Developer Path",
     duration: "Nov. 2018 - April 2020",
     description: "Software Engineering apprenticeship with Capgemini. ",
@@ -70,7 +70,7 @@ export const journeyData = [
   {
     type: "education",
     institution: "OpenClassrooms - Capgemini",
-    logoUrl: "assets/journey/education/logo-1.svg",
+    logoUrl: "assets/journey/education/openclassrooms.svg",
     qualification: "Expert JEE Developer Path",
     duration: "Nov. 2018 - April 2020",
     description:
@@ -79,7 +79,7 @@ export const journeyData = [
   {
     type: "education",
     institution: "OpenClassrooms - Capgemini",
-    logoUrl: "assets/journey/education/logo-1.svg",
+    logoUrl: "assets/journey/education/openclassrooms.svg",
     qualification: "Expert JEE Developer Path",
     duration: "Nov. 2018 - April 2020",
     description:
