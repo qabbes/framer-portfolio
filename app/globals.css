@@ -46,6 +46,13 @@
   .nav-link.active {
     @apply text-accent transition-all duration-200;
   }
+  :root {
+
+
+    --radius: 0.5rem
+
+
+  }
 
 
 }

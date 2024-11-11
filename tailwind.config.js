@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,7 +8,7 @@ module.exports = {
   ],
   theme: {
     container: {
-      center: true,
+      center: "true",
       padding: "15px",
     },
     screens: {
@@ -16,12 +17,10 @@ module.exports = {
       lg: "1024px",
       xl: "1200px",
     },
-
     fontFamily: {
       primary: "var(--font-bebas-neue)",
       secondary: "var(--font-inter)",
     },
-
     extend: {
       colors: {
         primary: "#10151f",
@@ -36,5 +35,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
