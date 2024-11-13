@@ -45,26 +45,28 @@ const Card = ({
                 //Render company/institution logo
                 <div
                   className={`${
-                    company === "French Minsitry of Interior"
-                      ? " relative w-[210px] h-[130px] xl:h-[140px]"
+                    company === "French Minsitry of Interior - Capgemini"
+                      ? " relative w-[180px] h-[120px] xl:h-[120px]"
+                      : institution === "OpenClassrooms - Capgemini"
+                      ? " relative w-[210px] h-[150px] xl:h-[150px]" //relative w-[210px] h-[130px] xl:h-[140px]
                       : " relative w-[210px] h-[38px] xl:h-[44px]"
                   } `}>
                   <Image
                     src={logoUrl}
-                    fill={company !== "Biomérieux" ? "responsive" : undefined}
+                    fill={company !== "Biomérieux - Capgemini" ? "contain" : undefined}
                     className={`${
-                      company === "Biomérieux"
-                        ? " absolute left-[65px] bottom-[-12px] "
+                      company === "Biomérieux - Capgemini"
+                        ? " absolute left-[59px] bottom-[-12px] "
                         : "object-contain"
                     } `}
-                    width={company === "Biomérieux" ? 72 : undefined}
-                    height={company === "Biomérieux" ? 72 : undefined}
+                    width={company === "Biomérieux - Capgemini" ? 67 : undefined}
+                    height={company === "Biomérieux - Capgemini" ? 67 : undefined}
                     alt=""
                   />
                 </div>
               )}
               <div className="xl:border-l xl:border-secondary/10 xl:pl-12 w-full">
-                <h3 className="hidden xl:flex h3 mb-2 xl:mb-4">
+                <h3 className="hidden xl:flex h3 mb-2 xl:mb-4 ">
                   {type === "experience"
                     ? company
                     : type === "education"
