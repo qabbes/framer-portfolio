@@ -26,7 +26,7 @@ export const journeyData = [
     company: "French Minsitry of Interior - Capgemini",
     logoUrl: "assets/journey/experience/Minint_sm.svg",
     position: "Java/SQL Developer",
-    duration: "Dec. 2024 - May 2024",
+    duration: "Dec. 2023 - May 2024",
     description:
       "Adaptation and updating of a calculation engine based on finance laws to define the budget of administrations (municipalities, departments, regions). Translated legal texts into algorithms and SQL queries.",
   },
