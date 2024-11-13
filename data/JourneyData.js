@@ -62,7 +62,7 @@ export const journeyData = [
     type: "education",
     institution: "OpenClassrooms - Capgemini",
     logoUrl: "assets/journey/education/openclassrooms.svg",
-    qualification: "Software Engineering Apprenticeship - Expert JEE Developer Path",
+    qualification: "Software Engineering Apprenticeship - JEE Developer",
     duration: "Nov. 2018 - April 2020",
     description:
       "Learned backend-development concepts. As final project, developed a travel booking platform in a microservices architecture, using Spring Boot, Angular and designed the cloud deployment strategy on AWS.",
@@ -92,7 +92,7 @@ export const journeyData = [
     qualification: "Electrical Engineering and Computer Science Bachelor",
     duration: "Sept. 2014 - June 2016",
     description:
-      "Completed through apprencticeship,  I built expertise in embedded systems, hardware-software integration, and real-time processing. I also gained hands-on experience programming automats in Ladder, enhancing my skills in industrial automation and control systems.",
+      "Completed through apprenticeship,  I built expertise in embedded systems, hardware-software integration, and real-time processing. Gained hands-on experience programming automats in Ladder, enhancing my skills in industrial automation and control systems.",
   },
 
   //certifications

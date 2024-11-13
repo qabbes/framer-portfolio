@@ -13,8 +13,8 @@ const Card = ({
   icon,
 }) => {
   return (
-    <div className="w-full h-[300px] overflow-hidden flex items-center sticky top-12">
-      <div className="w-full h-[270px] border border-accent/80 bg-[#f4ffff] rounded-[8px]">
+    <div className=" w-full h-[300px] overflow-hidden flex items-center sticky top-12">
+      <div className="w-full max-h-fit  border border-accent/80 bg-[#f4ffff] rounded-[8px]">
         <div className="flex flex-col h-full">
           <div
             className="h-[80px] xl:h-[68px] bg-white flex flex-col xl:flex-row justify-center 
@@ -47,20 +47,37 @@ const Card = ({
                   className={`${
                     company === "French Minsitry of Interior - Capgemini"
                       ? " relative w-[180px] h-[120px] xl:h-[120px]"
-                      : institution === "OpenClassrooms - Capgemini"
-                      ? " relative w-[210px] h-[150px] xl:h-[150px]" //relative w-[210px] h-[130px] xl:h-[140px]
-                      : " relative w-[210px] h-[38px] xl:h-[44px]"
+                      : " relative w-[210px] h-[38px] xl:h-[44px]" //relative w-[210px] h-[130px] xl:h-[140px]
                   } `}>
                   <Image
                     src={logoUrl}
-                    fill={company !== "Biomérieux - Capgemini" ? "contain" : undefined}
+                    fill={
+                      company !== "Biomérieux - Capgemini" &&
+                      institution !== "OpenClassrooms - Capgemini"
+                        ? "relative"
+                        : undefined
+                    }
                     className={`${
                       company === "Biomérieux - Capgemini"
                         ? " absolute left-[59px] bottom-[-12px] "
+                        : institution === "OpenClassrooms - Capgemini"
+                        ? "absolute top-[-25px] h-content-full"
                         : "object-contain"
                     } `}
-                    width={company === "Biomérieux - Capgemini" ? 67 : undefined}
-                    height={company === "Biomérieux - Capgemini" ? 67 : undefined}
+                    width={
+                      company === "Biomérieux - Capgemini"
+                        ? 67
+                        : institution === "OpenClassrooms - Capgemini"
+                        ? 200
+                        : undefined
+                    }
+                    height={
+                      company === "Biomérieux - Capgemini"
+                        ? 67
+                        : institution === "OpenClassrooms - Capgemini"
+                        ? 200
+                        : undefined
+                    }
                     alt=""
                   />
                 </div>
@@ -75,7 +92,7 @@ const Card = ({
                     ? name
                     : null}
                 </h3>
-                <p className="text-base max-w-[660px]">{description}</p>
+                <p className="text-base max-w-[660px] ">{description}</p>
               </div>
             </div>
           </div>

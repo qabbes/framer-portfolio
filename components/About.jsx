@@ -61,7 +61,7 @@ const About = () => {
               <AnimatedText text="My Name is Quentin" textStyles="h2 mb-2" />
               <p className="text-lg">Full Stack Developer</p>
               <p className="max-w-[680px] mx-auto xl:mx-0 mb-4">
-                I create fucntionnal ands robust websites using modern frontend
+                I create functionnal and robust websites using modern frontend
                 technologies and design principles. Explore my work to see how I combine
                 creativity with technologies to deliver exceptionnal digital experiences.
               </p>
