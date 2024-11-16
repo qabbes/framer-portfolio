@@ -59,33 +59,9 @@ const About = () => {
             <p className="max-w-[680px] mx-auto xl:mx-0 mb-4 ">
               I create functionnal and robust websites using modern frontend technologies and design
               principles. Explore my work to see how I combine creativity with technologies to
-              deliver exceptionnal digital experiences.
+              deliver simple yet effective digital experiences.
             </p>
             {/* Info items */}
-            <div
-              className="flex flex-col lg:flex-row gap-8 xl:gap-12 max-w-max
-              mx-auto xl:mx-0 items-center">
-              {/* Item 1*/}
-              <div className="max-w-max">
-                <div className="uppercase font-bold text-primary">Age</div>
-                <p>33 Years</p>
-              </div>
-              {/* Item 2*/}
-              <div className="max-w-max">
-                <div className="uppercase font-bold text-primary">Born </div>
-                <p>33 Years Ago</p>
-              </div>
-              {/* Item 3*/}
-              <div className="max-w-max">
-                <div className="uppercase font-bold text-primary">Born in</div>
-                <p>Hospital</p>
-              </div>
-              {/* Item 4*/}
-              <div className="max-w-max">
-                <div className="uppercase font-bold text-primary">Born in</div>
-                <p>France</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

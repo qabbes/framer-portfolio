@@ -7,13 +7,13 @@ const services = [
     icon: "/assets/services/web-development.svg",
   },
   {
-    title: "Applications Development",
+    title: "Custom Applications",
     description:
       "I develop full-stack applications with a cloud-first approach, blending performance and scalability.",
-    icon: "/assets/services/icon-3.svg",
+    icon: "/assets/services/icon-1.svg",
   },
   {
-    title: " API Integration and Development",
+    title: " API Integration and Design",
     description:
       "Enabling connectivity and automation through custom API development and integration.",
     icon: "/assets/services/icon-2.svg",
