@@ -10,25 +10,25 @@ const workData = [
   {
     href: "https://www.google.com",
     category: "fullstack",
-    img: "/assets/work/thumb-1.jpg",
-    title: "ETF Tracker",
+    img: "/assets/work/thumb-1.png",
+    title: "ETF Dashboard",
   },
   {
-    href: "https://www.google.com",
+    href: "https://game-hub-five-tan.vercel.app/",
     category: "frontend",
-    img: "/assets/work/thumb-2.jpg",
+    img: "/assets/work/game-hub-full.png",
     title: "Game Hub",
   },
   {
     href: "https://www.google.com",
     category: "fullstack",
-    img: "/assets/work/thumb-3.jpg",
+    img: "/assets/work/thumb-3.png",
     title: "Issue Tracker",
   },
   {
     href: "https://www.google.com",
     category: "frontend",
-    img: "/assets/work/thumb-4.jpg",
+    img: "/assets/work/thumb-4.png",
     title: "Game Hub",
   },
 ];
@@ -60,7 +60,7 @@ const Work = () => {
   };
 
   return (
-    <section className="pt-24 min-h-[1000px]" id="work">
+    <section className="pt-24 min-h-[800px]" id="work">
       <div className="container mx-auto">
         <Tabs defaultValue="all" className="w-full flex flex-col">
           <div
@@ -82,7 +82,7 @@ const Work = () => {
           </div>
           {/*Tabs Content*/}
           <TabsContent value={activeTab} className="w-full">
-            <div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-[30px]">
               <AnimatePresence>
                 {filteredWorkData.slice(0, visibleItems).map((item, index) => (
                   <motion.div
@@ -90,12 +90,20 @@ const Work = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.3 }}
                     className="mb-8">
                     <WorkItem {...item} />
                   </motion.div>
                 ))}
               </AnimatePresence>
+              {/*Load More Button */}
+              {visibleItems < filteredWorkData.length && (
+                <div className="flex justify-center mt-12">
+                  <button onClick={handleLoadMore} className="btn btn-accent ">
+                    Load More
+                  </button>
+                </div>
+              )}
             </div>
           </TabsContent>
         </Tabs>
