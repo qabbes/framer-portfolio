@@ -28,7 +28,7 @@ export const journeyData = [
     position: "Java/SQL Developer",
     duration: "Dec. 2023 - May 2024",
     description:
-      "Adaptation and updating of a calculation engine based on finance laws to define the budget of administrations (municipalities, departments, regions). Translated legal texts into algorithms and SQL queries.",
+      "Adaptation and updating of a calculation engine based on finance laws to define the budget of administrations. Translated legal texts into algorithms and SQL queries.",
   },
   {
     type: "experience",
