@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import Logo from "./logo";
+import Logo from "./Logo";
 
 const footer = () => {
   const getCurrentYear = new Date().getFullYear();
