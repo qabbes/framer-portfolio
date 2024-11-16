@@ -1,4 +1,5 @@
 import StatsItem from "./StatsItem";
+import { AnimatePresence, motion } from "framer-motion";
 
 /*TODO:Get numbers of commit for my account (GitHub API) */
 
