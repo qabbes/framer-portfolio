@@ -36,12 +36,7 @@ const About = () => {
                     repeat: Infinity,
                     ease: [0.59, -0.46, 0.48, 1.26], //linear TODO
                   }}>
-                  <Image
-                    src="/assets/about/shape-1.svg"
-                    width={150}
-                    height={150}
-                    alt=""
-                  />
+                  <Image src="/assets/about/shape-1.svg" width={150} height={150} alt="" />
                 </motion.div>
                 <div className="absolute text-center text-white">
                   <div className="text-5xl font-bold leading-none text-secondary">5+</div>
@@ -60,35 +55,35 @@ const About = () => {
             <div>
               <AnimatedText text="My Name is Quentin" textStyles="h2 mb-2" />
               <p className="text-lg">Full Stack Developer</p>
-              <p className="max-w-[680px] mx-auto xl:mx-0 mb-4">
-                I create functionnal and robust websites using modern frontend
-                technologies and design principles. Explore my work to see how I combine
-                creativity with technologies to deliver exceptionnal digital experiences.
-              </p>
-              {/* Info items */}
-              <div
-                className="flex flex-col lg:flex-row gap-8 xl:gap-12 max-w-max
+            </div>
+            <p className="max-w-[680px] mx-auto xl:mx-0 mb-4 ">
+              I create functionnal and robust websites using modern frontend technologies and design
+              principles. Explore my work to see how I combine creativity with technologies to
+              deliver exceptionnal digital experiences.
+            </p>
+            {/* Info items */}
+            <div
+              className="flex flex-col lg:flex-row gap-8 xl:gap-12 max-w-max
               mx-auto xl:mx-0 items-center">
-                {/* Item 1*/}
-                <div className="max-w-max">
-                  <div className="uppercase font-bold text-primary">Age</div>
-                  <p>33 Years</p>
-                </div>
-                {/* Item 2*/}
-                <div className="max-w-max">
-                  <div className="uppercase font-bold text-primary">Born </div>
-                  <p>33 Years Ago</p>
-                </div>
-                {/* Item 3*/}
-                <div className="max-w-max">
-                  <div className="uppercase font-bold text-primary">Born in</div>
-                  <p>Hospital</p>
-                </div>
-                {/* Item 4*/}
-                <div className="max-w-max">
-                  <div className="uppercase font-bold text-primary">Born in</div>
-                  <p>France</p>
-                </div>
+              {/* Item 1*/}
+              <div className="max-w-max">
+                <div className="uppercase font-bold text-primary">Age</div>
+                <p>33 Years</p>
+              </div>
+              {/* Item 2*/}
+              <div className="max-w-max">
+                <div className="uppercase font-bold text-primary">Born </div>
+                <p>33 Years Ago</p>
+              </div>
+              {/* Item 3*/}
+              <div className="max-w-max">
+                <div className="uppercase font-bold text-primary">Born in</div>
+                <p>Hospital</p>
+              </div>
+              {/* Item 4*/}
+              <div className="max-w-max">
+                <div className="uppercase font-bold text-primary">Born in</div>
+                <p>France</p>
               </div>
             </div>
           </div>
