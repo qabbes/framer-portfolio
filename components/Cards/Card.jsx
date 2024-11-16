@@ -14,7 +14,7 @@ const Card = ({
 }) => {
   return (
     <div className=" w-full h-[300px] overflow-hidden flex items-center sticky top-12">
-      <div className="w-full max-h-fit  border border-accent/80 bg-[#f4ffff] rounded-[8px]">
+      <div className="w-full h-[270px]  border border-accent/80 bg-[#f4ffff] rounded-[8px]">
         <div className="flex flex-col h-full">
           <div
             className="h-[80px] xl:h-[68px] bg-white flex flex-col xl:flex-row justify-center 
@@ -23,11 +23,7 @@ const Card = ({
             <div className="flex items-center gap-2  ">
               <Image src="/assets/journey/shape.svg" width={16} height={16} alt="" />
               <h3 className="text-lg font-semibold text-primary text-center">
-                {type === "experience"
-                  ? position
-                  : type === "education"
-                  ? qualification
-                  : duration}
+                {type === "experience" ? position : type === "education" ? qualification : duration}
               </h3>
             </div>
             <p className="text-base">
@@ -46,7 +42,7 @@ const Card = ({
                 <div
                   className={`${
                     company === "French Minsitry of Interior - Capgemini"
-                      ? " relative w-[180px] h-[120px] xl:h-[120px]"
+                      ? " relative w-[180px] h-[100px] xl:h-[120px] "
                       : " relative w-[210px] h-[38px] xl:h-[44px]" //relative w-[210px] h-[130px] xl:h-[140px]
                   } `}>
                   <Image
