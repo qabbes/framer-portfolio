@@ -7,6 +7,7 @@ import Journey from "@/components/Journey";
 import Services from "@/components/Services";
 import Work from "@/components/Work/Work";
 import FixedMenu from "@/components/FixedMenu";
+import Footer from "@/components/Footer";
 
 const Home = () => {
   // implement locomotive scroll
@@ -26,8 +27,7 @@ const Home = () => {
       <Journey />
       <Work />
       <Contact />
-      {/* temporary div */}
-      <div className="h-[3000px]"></div>
+      <Footer />
     </>
   );
 };
