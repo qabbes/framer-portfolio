@@ -10,7 +10,7 @@ const workData = [
   {
     href: "https://www.google.com",
     category: "fullstack",
-    img: "/assets/work/thumb-1.png",
+    img: "/assets/work/construction.svg",
     title: "ETF Dashboard",
   },
   {
@@ -22,14 +22,8 @@ const workData = [
   {
     href: "https://www.google.com",
     category: "fullstack",
-    img: "/assets/work/thumb-3.png",
+    img: "/assets/work/maintenance.svg",
     title: "Issue Tracker",
-  },
-  {
-    href: "https://www.google.com",
-    category: "frontend",
-    img: "/assets/work/thumb-4.png",
-    title: "Game Hub",
   },
 ];
 
@@ -51,8 +45,6 @@ const Work = () => {
   //filter workItems based on activeTab
   const filteredWorkData =
     activeTab === "all" ? workData : workData.filter((item) => item.category === activeTab);
-
-  console.log("filtered", filteredWorkData);
 
   //handle load more button click
   const handleLoadMore = () => {

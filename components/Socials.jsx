@@ -6,11 +6,11 @@ import { IoLogoGithub } from "react-icons/io";
 const socials = [
   {
     icon: <RiInstagramFill />,
-    path: "https://www.instagram.com/quentinabbes/",
+    path: "https://www.instagram.com/",
   },
   {
     icon: <IoLogoGithub />,
-    path: "https://https://github.com/qabbes",
+    path: "https://github.com/qabbes",
   },
   {
     icon: <FaTwitter />,
