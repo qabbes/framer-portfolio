@@ -51,10 +51,10 @@ const Contact = () => {
 
   //prettier-add
   return (
-    <section className="pt-8 xl:pt-12 pb-32" id="contact">
-      <div className="container mx-auto">
-        <div className="flex flex-col items-center xl:flex-row gap-16">
-          <div className="flex-1 mx-auto xl:mx-0 flex flex-col">
+    <section className="pt-8 xl:pt-8 pb-32" id="contact">
+      <div className=" container mx-auto">
+        <div className="flex flex-col items-center xl:flex-row gap-16 -mt-2px]">
+          <div className="flex-1 mx-auto xl:mx-0 flex flex-col  pb-2 ">
             <AnimatedText
               text="Let's Work Together"
               textStyles="h2 mb-12 text-center xl:text-left"
@@ -144,7 +144,7 @@ const Contact = () => {
               {/*submit button*/}
               <button
                 type="submit"
-                disables={state.submitting}
+                disabled={state.submitting}
                 className="btn btn-accent flex items-center justify-center gap-2">
                 {state.submitting ? (
                   <span>Sending...</span>
@@ -152,14 +152,12 @@ const Contact = () => {
                   <>
                     {/*Show icon with opacity transition*/}
                     <FaCheckCircle
-                      className={`absolute text-white text-lg transition-opacity duration-500 ease-in-out ${
-                        showIcon ? "opacity-100" : "opacity-0"
-                      }`}
+                      className={`absolute text-white text-lg transition-opacity duration-500 ease-in-out 
+                        ${showIcon ? "opacity-100" : "opacity-0"}`}
                     />
                     <span
-                      className={`transition-opacity duration-500 ease-in-out ${
-                        showIcon ? "opacity-0" : "opacity-100"
-                      }`}>
+                      className={`transition-opacity duration-500 ease-in-out 
+                        ${showIcon ? "opacity-0" : "opacity-100"}`}>
                       Send Message
                     </span>
                   </>
@@ -168,8 +166,14 @@ const Contact = () => {
             </form>
           </div>
           {/*Contact Image*/}
-          <div className="hidden xl:flex relative w-[577px] h-[664px] rounded-lg overflow-hidden">
-            <Image src="/assets/contact/img.png" fill className="object-cover" quality={100} />
+          <div className=" hidden xl:flex relative w-[577px] h-[655px] rounded-lg overflow-hidden ">
+            <Image
+              src="/assets/contact/img.png"
+              fill
+              className="object-cover"
+              quality={100}
+              alt=""
+            />
           </div>
         </div>
       </div>
