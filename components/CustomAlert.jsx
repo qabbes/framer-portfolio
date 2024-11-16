@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -22,7 +23,16 @@ const CustomAlert = ({ title, setIsAlertOpen, isAlertOpen }) => {
           <AlertDialogTitle>
             Sorry,
             <br />
-            {title}
+            {title === "Issue Tracker" ? (
+              <Link
+                target="_blank"
+                href="https://github.com/qabbes/issue-tracker"
+                className="underline text-blue-400 font-semibold">
+                {title}
+              </Link>
+            ) : (
+              "ETF Dashboard"
+            )}
             {title === "Issue Tracker" ? " is under maintenance" : " is under construction"}
           </AlertDialogTitle>
         </div>
