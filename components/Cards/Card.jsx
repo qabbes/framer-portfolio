@@ -32,7 +32,7 @@ const Card = ({
           </div>
           <div className="flex-1 flex items-center justify-center xl:justify-start md:py-8 md:px-16">
             {/*Render skills icons*/}
-            <div className=" flex flex-col xl:flex-row items-center xl:items-center gap-4 text-center xl:text-left sm:text-center xl:gap-10 px-4 xl:px-0 ">
+            <div className=" flex flex-col xl:flex-row items-center xl:items-center gap-4 text-center xl:text-left base:text-center  xl:gap-10 px-4 xl:px-0 ">
               {type === "skill" ? (
                 <div className="w-max xl:w-[300px] h-full relative flex items-center justify-center">
                   <div className="text-5xl text-primary/150">{icon}</div>
@@ -42,7 +42,7 @@ const Card = ({
                 <div
                   className={`${
                     company === "French Minsitry of Interior - Capgemini"
-                      ? " relative w-[180px] h-[100px] xl:h-[120px] "
+                      ? " relative w-[180px] h-[90px] xl:h-[120px] "
                       : " relative w-[210px] h-[38px] xl:h-[44px]" //relative w-[210px] h-[130px] xl:h-[140px]
                   } `}>
                   <Image
@@ -55,7 +55,7 @@ const Card = ({
                     }
                     className={`${
                       company === "Biomérieux - Capgemini"
-                        ? " absolute left-[59px] bottom-[-12px] "
+                        ? " absolute xl:left-[62px] xl:bottom-[-12px] sm:left-[70px] sm:bottom-[-12px]"
                         : institution === "OpenClassrooms - Capgemini"
                         ? "absolute top-[-25px] h-content-full"
                         : "object-contain"
@@ -88,7 +88,14 @@ const Card = ({
                     ? name
                     : null}
                 </h3>
-                <p className="text-base max-w-[660px] ">{description}</p>
+                <p
+                  className={`text-base max-w-[660px] ${
+                    company === "French Minsitry of Interior - Capgemini"
+                      ? " xl:mt-0 sm:-mt-[20px]"
+                      : ""
+                  }`}>
+                  {description}
+                </p>
               </div>
             </div>
           </div>
