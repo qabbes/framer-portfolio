@@ -18,7 +18,7 @@ const socials = [
   },
   {
     icon: <FaLinkedin />,
-    path: "https://www.linkedin.com/in/quentinabbes/",
+    path: "https://www.linkedin.com/in/quentin-abbes-09bab194/",
   },
 ];
 const Socials = ({ containerStyles, iconStyles }) => {
