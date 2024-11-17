@@ -22,7 +22,7 @@ const workData = [
   {
     href: "https://www.google.com",
     category: "fullstack",
-    img: "/assets/work/maintenance.svg",
+    img: "/assets/work/issue-tracker.png",
     title: "Issue Tracker",
   },
 ];
