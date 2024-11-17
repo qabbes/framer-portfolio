@@ -42,7 +42,7 @@ const Card = ({
                 <div
                   className={`${
                     company === "French Minsitry of Interior - Capgemini"
-                      ? " relative w-[180px] h-[90px] xl:h-[120px] "
+                      ? " relative w-[180px] h-[80px] xl:h-[120px] "
                       : " relative w-[210px] h-[38px] xl:h-[44px]" //relative w-[210px] h-[130px] xl:h-[140px]
                   } `}>
                   <Image
@@ -90,7 +90,7 @@ const Card = ({
                 </h3>
                 <p
                   className={`text-base max-w-[660px] ${
-                    description.length > 160 ? "sm:pb-[8px]" : ""
+                    description?.length > 160 ? "sm:pb-[10px]" : ""
                   } ${type === "education" ? "sm:text-sm" : ""} ${
                     company === "French Minsitry of Interior - Capgemini"
                       ? " xl:mt-0 sm:-mt-[9px]"
