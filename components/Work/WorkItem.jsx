@@ -17,10 +17,10 @@ const WorkItem = ({ href, category, img, title }) => {
 
   return (
     <>
-      <Link href={href} onClick={handleClick} className="group">
+      <Link href={href} onClick={handleClick} className="group" target="blank">
         <div
           className="w-full h-[300px] p-8 rounded-[30px] flex items-center 
-    justify-center mb-6 relative overflow-hidden bg-[#f4f4f4] shadow-custom ">
+    justify-center mb-6 relative overflow-hidden bg-[#f4f4f4] shadow-custom">
           <Badge className="bg-primary text-base z-40 absolute top-6 left-6 capitalize">
             {category}
           </Badge>

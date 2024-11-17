@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const statsData = [
   {
-    endCountNum: 4,
+    endCountNum: 5,
     endCountText: "+",
     text: "Yrs of Experience",
   },
