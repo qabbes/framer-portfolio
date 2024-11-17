@@ -89,9 +89,9 @@ const Card = ({
                     : null}
                 </h3>
                 <p
-                  className={`text-base max-w-[660px]  ${
-                    type === "education" ? "sm:text-sm" : ""
-                  } ${
+                  className={`text-base max-w-[660px] ${
+                    description.length > 160 ? "sm:pb-[8px]" : ""
+                  } ${type === "education" ? "sm:text-sm" : ""} ${
                     company === "French Minsitry of Interior - Capgemini"
                       ? " xl:mt-0 sm:-mt-[9px]"
                       : company === "Biomérieux - Capgemini"
