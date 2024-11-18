@@ -15,6 +15,7 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://quentinabbes.com"),
   openGraph: {
     title: "Quentin Abbes",
     description: "Quentin Abbes Portfolio",
