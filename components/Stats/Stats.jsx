@@ -15,7 +15,7 @@ const statsData = [
     text: "Websites Built",
   },
   {
-    endCountNum: 95,
+    endCountNum: 96,
     endCountText: "+",
     text: "Commits",
   },
