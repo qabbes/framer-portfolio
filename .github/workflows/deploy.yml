@@ -1,0 +1,36 @@
+name: Deploy to S3
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Install AWS CLI
+      - name: Install AWS CLI
+        uses: aws-actions/configure-aws-cli@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-3 # S3 bucket's region, e.g., us-east-1
+
+      # Sync files to S3 bucket
+      - name: Sync files to S3
+        run: |
+          aws s3 sync . s3://qabbes.me \
+            --exclude ".git/*" \
+            --delete
+
+      # Invalidate CloudFront cache (optional)
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation --distribution-id E2JFK0Z3XSQOD8 --paths "/*"
+          aws cloudfront create-invalidation --distribution-id E198Q3UBPM6473 --paths "/*"
