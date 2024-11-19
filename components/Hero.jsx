@@ -21,10 +21,10 @@ const Hero = () => {
           className="relative z-20 h-full w-full xl:max-w-[768px] flex flex-col items-center
            xl:items-start justify-center text-center xl:text-left pt-10">
           <h1 className="h1 mb-2 max-w-[320px] xl:max-w-none">
-            <span className="text-accent">I Build And</span> Design Czesc
+            <span className="text-accent">I Build And</span> Design Powerful
             <TypeAnimation
               preRenderFirstString={true}
-              sequence={["Katrinusz", 2000, "❤️", 2000]}
+              sequence={["Websites", 2000, "Apps", 2000]}
               speed={50}
               repeat={Infinity}
               wrapper="span"
