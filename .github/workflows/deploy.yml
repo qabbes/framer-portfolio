@@ -14,20 +14,41 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+         node-version: 22.5.1 # Replace with the version your project requires
+
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Build the project
+      - name: Build the project
+        run: npm run build 
+        
+
       # Install AWS CLI
       - name: Install AWS CLI
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-cli@v2.1.0
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: eu-west-3
+          aws-region: eu-west-3 
 
-      # Sync files to S3 bucket
-      - name: Sync files to S3
-        run: |
-          aws s3 sync . s3://qabbes.me \
-            --exclude ".git/*" \
-            --delete
+      # Step 5: Sync files with S3
+      - name: Sync with S3
+        uses: jakejarvis/s3-sync-action@v0.5.3
+        with:
+          args: --delete
+        env:
+          AWS_S3_BUCKET: "qabbes.me" 
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: "eu-west-3" 
+          SOURCE_DIR: "./out" # Directory where the build output is located )
 
       # Invalidate CloudFront cache (optional)
       - name: Invalidate CloudFront cache
