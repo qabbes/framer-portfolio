@@ -4,12 +4,18 @@ import Link from "next/link";
 import CustomAlert from "../CustomAlert";
 import { FiArrowRight } from "react-icons/fi";
 import { Badge } from "../ui/badge";
+import { IoLogoGithub } from "react-icons/io";
 
-const WorkItem = ({ href, category, img, title }) => {
+const WorkItem = ({ href, repo, category, img, title }) => {
   const [isAlertOpen, setIsAlertOpen] = useState(false);
 
   const handleClick = (e) => {
-    if (title === "Issue Tracker" || title === "ETF Dashboard") {
+    const targetId = e.target.id;
+    if (targetId) {
+      window.open(targetId, '_blank');
+    }
+    console.log(targetId);
+    if (title === "ETF Dashboard") {
       e.preventDefault();
       setIsAlertOpen(true);
     }
@@ -29,20 +35,26 @@ const WorkItem = ({ href, category, img, title }) => {
             fill
             priority
             quality={100}
-            className={`object-cover  group-hover:scale-105 transition-all duration-500 ${
-              title === "Issue Tracker" ? "pt-[15px]" : ""
-            } `}
+            className={`object-cover  group-hover:scale-105 transition-all duration-500 ${title === "Issue Tracker" ? "pt-[15px]" : ""
+              } `}
             alt={title}
           />
         </div>
         <div className="flex items-center justify-center">
           <div className="flex-1">
             <h3 className="h3">{title}</h3>
-            <button
-              className="bg-accent text-white rounded-full w-[48px] h-[48px] 
-            flex items-center justify-center -rotate-45 group-hover:rotate-0 transition-all duration-500">
-              <FiArrowRight className="text-3xl" />
-            </button>
+            <div className="flex flex-row gap-4 mt-4">
+              <button
+                className="bg-accent text-white rounded-full w-[48px] h-[48px]
+              flex items-center justify-center -rotate-45 hover:rotate-0 transition-all duration-500">
+                <FiArrowRight className="text-3xl" />
+              </button>
+              <button id={repo}
+                className="bg-slate-800 text-white rounded-full w-[48px] h-[48px]
+                flex items-center justify-center">
+                <IoLogoGithub id={repo} className="text-3xl hover:scale-125 duration-500" />
+              </button>
+            </div>
           </div>
         </div>
       </Link>
