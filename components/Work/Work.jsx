@@ -8,19 +8,22 @@ import WorkItem from "./WorkItem";
 
 const workData = [
   {
-    href: "https://www.google.com",
+    href: "",
+    repo: "https://github.com/qabbes",
     category: "fullstack",
     img: "/assets/work/construction.svg",
     title: "ETF Dashboard",
   },
   {
     href: "https://game-hub-five-tan.vercel.app/",
+    repo: "https://github.com/qabbes/game-hub",
     category: "frontend",
     img: "/assets/work/game-hub-full.png",
     title: "Game Hub",
   },
   {
-    href: "https://www.google.com",
+    href: "https://issue-tracker.qabbes.me",
+    repo: "https://github.com/qabbes/issue-tracker",
     category: "fullstack",
     img: "/assets/work/issue-tracker.png",
     title: "Issue Tracker",

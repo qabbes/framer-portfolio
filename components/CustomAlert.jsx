@@ -11,7 +11,6 @@ import { IoLogoGithub } from "react-icons/io";
 
 const CustomAlert = ({ title, setIsAlertOpen, isAlertOpen }) => {
   const handleClick = (e) => {
-    //write a function that set isAlertOpen to false and link a user to the repo
     setIsAlertOpen(false);
     navigate("https://github.com/qabbes/issue-tracker");
   };
