@@ -11,10 +11,11 @@ const Card = ({
   qualification,
   name,
   icon,
+  link,
 }) => {
   return (
-    <div className=" w-full h-[300px] overflow-hidden flex items-center sticky top-12">
-      <div className="w-full h-[270px]  border border-accent/80 bg-[#f4ffff] rounded-[8px]">
+    <div className=" w-full h-[300px] sm:h-[350px] overflow-hidden flex items-center sticky top-12">
+      <div className="w-full h-[270px] sm:h-[320px] border border-accent/80 bg-[#f4ffff] rounded-[8px]">
         <div className="flex flex-col h-full">
           <div
             className="h-[80px] xl:h-[68px] bg-white flex flex-col xl:flex-row justify-center 
@@ -34,14 +35,20 @@ const Card = ({
             {/*Render skills icons*/}
             <div className=" flex flex-col xl:flex-row items-center xl:items-center gap-4 text-center xl:text-left base:text-center  xl:gap-10 sm:gap-2 px-4 xl:px-0 ">
               {type === "skill" ? (
-                <div className="w-max xl:w-[300px] h-full relative flex items-center justify-center">
-                  <div className="text-5xl text-primary/150">{icon}</div>
+                <div
+                  className={`${
+                    link !== undefined && type === "skill"
+                      ? " text-6xl text-primary/150"
+                      : " text-5xl text-primary/150" //relative w-[210px] h-[130px] xl:h-[140px]
+                  } `}>
+                  {icon}
                 </div>
               ) : (
                 //Render company/institution logo
                 <div
                   className={`${
-                    company === "French Minsitry of Interior - Capgemini"
+                    company === "French Minsitry of Interior - Capgemini" ||
+                    company === "French Departement of Social Services - Capgemini"
                       ? " relative w-[180px] h-[80px] xl:h-[120px] "
                       : " relative w-[210px] h-[38px] xl:h-[44px]" //relative w-[210px] h-[130px] xl:h-[140px]
                   } `}>
