@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useMediaQuery } from "react-responsive";
 
 const Card = ({
   type,
@@ -13,9 +14,11 @@ const Card = ({
   icon,
   link,
 }) => {
+  const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
+
   return (
-    <div className=" w-full h-[300px] sm:h-[350px] overflow-hidden flex items-center sticky top-12">
-      <div className="w-full h-[270px] sm:h-[320px] border border-accent/80 bg-[#f4ffff] rounded-[8px]">
+    <div className=" w-full h-[300px] sm:h-[360px] overflow-hidden flex items-center sticky top-12">
+      <div className="w-full h-[270px] sm:h-[330px] border border-accent/80 bg-[#f4ffff] rounded-[8px]">
         <div className="flex flex-col h-full">
           <div
             className="h-[80px] xl:h-[68px] bg-white flex flex-col xl:flex-row justify-center 
@@ -24,7 +27,13 @@ const Card = ({
             <div className="flex items-center gap-2  ">
               <Image src="/assets/journey/shape.svg" width={16} height={16} alt="" />
               <h3 className="text-lg sm:text-lg/5 font-semibold text-primary text-center sm:pt-[8px]">
-                {type === "experience" ? position : type === "education" ? qualification : duration}
+                {type === "experience"
+                  ? position
+                  : type === "education"
+                  ? qualification
+                  : type === "skill" && isMobile
+                  ? name + " - " + duration
+                  : duration}
               </h3>
             </div>
             <p className="text-base sm:text-sm/tight sm:pt-[5px]">
@@ -38,7 +47,7 @@ const Card = ({
                 <div
                   className={`${
                     link !== undefined && type === "skill"
-                      ? " text-6xl text-primary/150"
+                      ? " text-7xl text-primary/150"
                       : " text-5xl text-primary/150" //relative w-[210px] h-[130px] xl:h-[140px]
                   } `}>
                   {icon}
@@ -62,7 +71,7 @@ const Card = ({
                     }
                     className={`${
                       company === "Biomérieux - Capgemini"
-                        ? " absolute xl:left-[62px] xl:bottom-[-12px] sm:left-[80px] sm:bottom-[-12px]"
+                        ? " absolute xl:left-[62px] xl:bottom-[-12px] sm:left-[80px] sm:bottom-[-8px] sm:mb-[5px]"
                         : institution === "OpenClassrooms - Capgemini"
                         ? "absolute top-[-25px] sm:top-[-38px] h-content-full "
                         : "object-contain"

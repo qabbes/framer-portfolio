@@ -110,7 +110,7 @@ export const journeyData = [
   //Skills
   {
     type: "skill",
-    name: "AWS Certified Cloud Practitioner - CLF-02",
+    name: "AWS Certified Cloud Practitioner",
     link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/0ba5f6bea23343f49742e53b483c5dab",
     duration: "Obtained Nov. 2024",
     icon: <FaAws />,
