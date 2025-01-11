@@ -12,12 +12,22 @@ import { SiAdobe } from "react-icons/si";
 
 export const journeyData = [
   //experience
+
+  {
+    type: "experience",
+    company: "French Departement of Social Services - Capgemini",
+    logoUrl: "assets/journey/experience/Minint_soc_2.svg",
+    position: "Full-Stack Developer",
+    duration: "Nov. 2024 - Present",
+    description:
+      "Developped features on a SpringBoot/React app linking social & judicial services, aiding adults in need of judicial assistance. Integrated a custom Keycloak based IAM solution to ensure secure data management for social & judicial workers.",
+  },
   {
     type: "experience",
     company: "Capgemini",
     logoUrl: "assets/journey/experience/Capgemini.svg",
     position: "Web Developer",
-    duration: "Oct. 2024 - Present",
+    duration: "Sept. 2024 - Nov. 2024",
     description:
       "Developed web-interfaces for managing warehouses personnel in a supply-chain context. Delivered pixel-perfect UIs using React and Zustand.",
   },
@@ -100,32 +110,15 @@ export const journeyData = [
   //Skills
   {
     type: "skill",
-    name: "HTML",
-    icon: <FaHtml5 />,
+    name: "AWS Certified Cloud Practitioner - CLF-02",
+    link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/0ba5f6bea23343f49742e53b483c5dab",
+    duration: "Obtained Nov. 2024",
+    icon: <FaAws />,
   },
   {
     type: "skill",
-    name: "CSS",
-    icon: <FaCss3Alt />,
-  },
-  {
-    type: "skill",
-    name: "Javascript",
-    icon: <FaJs />,
-  },
-  {
-    type: "skill",
-    name: "React",
-    icon: <FaReact />,
-  },
-  {
-    type: "skill",
-    name: "Java",
-    icon: <FaJava />,
-  },
-  {
-    type: "skill",
-    name: "AEM",
+    name: "Adobe Certified Expert - AEM Sites Developer",
+    duration: "Obtained Nov. 2020",
     icon: <SiAdobe />,
   },
 ];

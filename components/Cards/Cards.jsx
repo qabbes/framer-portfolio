@@ -14,7 +14,7 @@ const Cards = () => {
         <TabsList className="max-w-max mb-[30px]">
           <TabsTrigger value="experience">Experience</TabsTrigger>
           <TabsTrigger value="education">Education</TabsTrigger>
-          <TabsTrigger value="skill">My Skills</TabsTrigger>
+          <TabsTrigger value="skill">Certifications</TabsTrigger>
         </TabsList>
         <TabsContent value="experience" className="w-full">
           <AnimatePresence>
