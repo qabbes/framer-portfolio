@@ -35,8 +35,9 @@ const WorkItem = ({ href, repo, category, img, title }) => {
             fill
             priority
             quality={100}
-            className={`object-cover  group-hover:scale-105 transition-all duration-500 ${title === "Issue Tracker" ? "pt-[15px]" : ""
-              } `}
+            className={`object-cover  group-hover:scale-105 transition-all duration-500 ${
+              title === "ETF Dashboard" ? "object-fill" : ""
+            } `}
             alt={title}
           />
         </div>
@@ -49,7 +50,8 @@ const WorkItem = ({ href, repo, category, img, title }) => {
               flex items-center justify-center -rotate-45 hover:rotate-0 transition-all duration-500">
                 <FiArrowRight className="text-3xl" />
               </button>
-              <button id={repo}
+              <button
+                id={repo}
                 className="bg-slate-800 text-white rounded-full w-[48px] h-[48px]
                 flex items-center justify-center">
                 <IoLogoGithub id={repo} className="text-3xl hover:scale-125 duration-500" />

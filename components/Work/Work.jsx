@@ -9,9 +9,9 @@ import WorkItem from "./WorkItem";
 const workData = [
   {
     href: "",
-    repo: "https://github.com/qabbes",
+    repo: "https://github.com/qabbes/etf-dashboard",
     category: "fullstack",
-    img: "/assets/work/construction.svg",
+    img: "/assets/work/arch-tr.svg",
     title: "ETF Dashboard",
   },
   {

@@ -1,13 +1,4 @@
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaDocker,
-  FaFigma,
-  FaReact,
-  FaJava,
-  FaAws,
-} from "react-icons/fa";
+import { FaAws } from "react-icons/fa";
 import { SiAdobe } from "react-icons/si";
 
 export const journeyData = [

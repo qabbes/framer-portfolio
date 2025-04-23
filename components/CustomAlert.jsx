@@ -36,10 +36,20 @@ const CustomAlert = ({ title, setIsAlertOpen, isAlertOpen }) => {
           </AlertDialogTitle>
         </div>
         <AlertDialogDescription>
-          <span className="">{title} </span>
-          {title === "Issue Tracker"
-            ? " is being deployed and will be back soon"
-            : " is currently being built, ETC Q1 2025"}
+          <h1 className="text-slate-500 text-center">{title}</h1>
+          {title === "Issue Tracker" ? (
+            " is being deployed and will be back soon"
+          ) : (
+            <>
+              is currently being built,{" "}
+              <Link
+                href="https://github.com/qabbes/etf-dashboard"
+                target="_blank"
+                className="text-blue-500 underline">
+                check the repo
+              </Link>
+            </>
+          )}
         </AlertDialogDescription>
         <div className="flex flex-row gap-[50px]">
           <AlertDialogAction
