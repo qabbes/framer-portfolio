@@ -10,12 +10,7 @@ const WorkItem = ({ href, repo, category, img, title }) => {
   const [isAlertOpen, setIsAlertOpen] = useState(false);
 
   const handleClick = (e) => {
-    const targetId = e.target.id;
-    if (targetId) {
-      window.open(targetId, '_blank');
-    }
-    console.log(targetId);
-    if (title === "ETF Dashboard") {
+    if (title.includes("ETF")) {
       e.preventDefault();
       setIsAlertOpen(true);
     }
@@ -53,7 +48,11 @@ const WorkItem = ({ href, repo, category, img, title }) => {
               <button
                 id={repo}
                 className="bg-slate-800 text-white rounded-full w-[48px] h-[48px]
-                flex items-center justify-center">
+                flex items-center justify-center"
+                onClick={(e) => {
+                  e.stopPropagation(); //Stop Bubbling
+                  window.open(repo, "_blank");
+                }}>
                 <IoLogoGithub id={repo} className="text-3xl hover:scale-125 duration-500" />
               </button>
             </div>
